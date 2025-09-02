@@ -1,27 +1,6 @@
-simple-llvm — README
 
-Коротко и без воды: это минимальный учебный компилятор / интерпретатор на Rust + простая GUI-обёртка на Go.
-Проект умеет: лексить → парсить → строить AST → интерпретировать (интерпретатор) → генерировать LLVM IR (codegen via inkwell). GUI запускает core и показывает вывод в браузере.
 
-Ниже — как всё устроено, как собрать и запустить на Ubuntu 24.04 (и как решать типичные ошибки).
-
-Структура проекта (короче)
-simple-llvm/
-├─ Cargo.toml  (workspace)
-├─ core/        (Rust core: lexer, parser, ast, interpreter, codegen, main)
-│  ├─ Cargo.toml
-│  └─ src/
-│     ├─ main.rs
-│     ├─ lexer.rs
-│     ├─ parser.rs
-│     ├─ ast.rs
-│     ├─ interpreter.rs
-│     └─ codegen.rs
-├─ gui/         (Go web GUI)
-│  └─ main.go
-└─ README.md
-
-Что делает каждая часть (очень просто)
+# Что делает каждая часть (очень просто)
 
 core/ — основа на Rust.
 
